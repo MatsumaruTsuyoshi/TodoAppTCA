@@ -8,6 +8,9 @@
 import ComposableArchitecture
 import SwiftUI
 
+// LocalizedStringKeyのおかげで.all, .active, .completed といった値がローカライズされた文字列のキーとして使用できるようになる
+// CaseIterableはFilter.allCasesという形ですべてのenumを取得できる
+// HashableはDictionary(Map)として使えるようになる
 enum Filter: LocalizedStringKey, CaseIterable, Hashable {
   case all = "All"
   case active = "Active"
@@ -18,6 +21,7 @@ enum Filter: LocalizedStringKey, CaseIterable, Hashable {
 struct Todos {
   @ObservableState
   struct State: Equatable {
+    // editModeをenvironmentに差し込むことでとてもEditMode時のUI変更をシンプルにできる
     var editMode: EditMode = .inactive
     var filter: Filter = .all
     var todos: IdentifiedArrayOf<Todo.State> = []
@@ -46,6 +50,7 @@ struct Todos {
   private enum CancelID { case todoCompletion }
 
   var body: some Reducer<State, Action> {
+    //BindingReducerのおかげで、StateとViewがBindされるみたい。
     BindingReducer()
     Reduce { state, action in
       switch action {
