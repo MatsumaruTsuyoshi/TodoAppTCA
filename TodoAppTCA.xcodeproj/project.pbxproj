@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		C6E1060A2BE8A60A00BB4A4A /* TodoAppTCAApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E106092BE8A60A00BB4A4A /* TodoAppTCAApp.swift */; };
-		C6E1060C2BE8A60A00BB4A4A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E1060B2BE8A60A00BB4A4A /* ContentView.swift */; };
 		C6E1060E2BE8A60B00BB4A4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6E1060D2BE8A60B00BB4A4A /* Assets.xcassets */; };
 		C6E106112BE8A60B00BB4A4A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6E106102BE8A60B00BB4A4A /* Preview Assets.xcassets */; };
 		C6E1061B2BE8A60C00BB4A4A /* TodoAppTCATests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E1061A2BE8A60C00BB4A4A /* TodoAppTCATests.swift */; };
 		C6E106252BE8A60C00BB4A4A /* TodoAppTCAUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E106242BE8A60C00BB4A4A /* TodoAppTCAUITests.swift */; };
 		C6E106272BE8A60C00BB4A4A /* TodoAppTCAUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E106262BE8A60C00BB4A4A /* TodoAppTCAUITestsLaunchTests.swift */; };
+		C6E106342BE8A67600BB4A4A /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E106332BE8A67600BB4A4A /* Todo.swift */; };
+		C6E106362BE8A68E00BB4A4A /* Todos.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E106352BE8A68E00BB4A4A /* Todos.swift */; };
+		C6E106392BE8A6B400BB4A4A /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = C6E106382BE8A6B400BB4A4A /* ComposableArchitecture */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +38,6 @@
 /* Begin PBXFileReference section */
 		C6E106062BE8A60A00BB4A4A /* TodoAppTCA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodoAppTCA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6E106092BE8A60A00BB4A4A /* TodoAppTCAApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoAppTCAApp.swift; sourceTree = "<group>"; };
-		C6E1060B2BE8A60A00BB4A4A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C6E1060D2BE8A60B00BB4A4A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C6E106102BE8A60B00BB4A4A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C6E106162BE8A60C00BB4A4A /* TodoAppTCATests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TodoAppTCATests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +45,8 @@
 		C6E106202BE8A60C00BB4A4A /* TodoAppTCAUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TodoAppTCAUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6E106242BE8A60C00BB4A4A /* TodoAppTCAUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoAppTCAUITests.swift; sourceTree = "<group>"; };
 		C6E106262BE8A60C00BB4A4A /* TodoAppTCAUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoAppTCAUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C6E106332BE8A67600BB4A4A /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
+		C6E106352BE8A68E00BB4A4A /* Todos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todos.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6E106392BE8A6B400BB4A4A /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,9 +99,10 @@
 			isa = PBXGroup;
 			children = (
 				C6E106092BE8A60A00BB4A4A /* TodoAppTCAApp.swift */,
-				C6E1060B2BE8A60A00BB4A4A /* ContentView.swift */,
 				C6E1060D2BE8A60B00BB4A4A /* Assets.xcassets */,
 				C6E1060F2BE8A60B00BB4A4A /* Preview Content */,
+				C6E106332BE8A67600BB4A4A /* Todo.swift */,
+				C6E106352BE8A68E00BB4A4A /* Todos.swift */,
 			);
 			path = TodoAppTCA;
 			sourceTree = "<group>";
@@ -143,6 +148,9 @@
 			dependencies = (
 			);
 			name = TodoAppTCA;
+			packageProductDependencies = (
+				C6E106382BE8A6B400BB4A4A /* ComposableArchitecture */,
+			);
 			productName = TodoAppTCA;
 			productReference = C6E106062BE8A60A00BB4A4A /* TodoAppTCA.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +223,9 @@
 				Base,
 			);
 			mainGroup = C6E105FD2BE8A60A00BB4A4A;
+			packageReferences = (
+				C6E106372BE8A6B400BB4A4A /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+			);
 			productRefGroup = C6E106072BE8A60A00BB4A4A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -257,8 +268,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C6E1060C2BE8A60A00BB4A4A /* ContentView.swift in Sources */,
+				C6E106342BE8A67600BB4A4A /* Todo.swift in Sources */,
 				C6E1060A2BE8A60A00BB4A4A /* TodoAppTCAApp.swift in Sources */,
+				C6E106362BE8A68E00BB4A4A /* Todos.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -588,6 +600,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C6E106372BE8A6B400BB4A4A /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.10.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C6E106382BE8A6B400BB4A4A /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C6E106372BE8A6B400BB4A4A /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C6E105FE2BE8A60A00BB4A4A /* Project object */;
 }
